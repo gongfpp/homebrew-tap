@@ -7,6 +7,8 @@ cask "onemutemic" do
   desc "Menu bar app that mutes the microphone system-wide with one hotkey"
   homepage "https://github.com/gongfpp/OneMuteMic"
 
+  depends_on macos: ">= :ventura"
+
   app "OneMuteMic.app"
 
   zap trash: [
