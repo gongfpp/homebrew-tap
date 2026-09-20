@@ -17,8 +17,12 @@ cask "onemutemic" do
 
   caveats <<~EOS
     OneMuteMic is not notarized yet, so macOS may block the first launch with
-    "Apple cannot verify ...". To open it:
-      1. System Settings › Privacy & Security › "Open Anyway", or
-      2. reinstall with: brew install --cask --no-quarantine gongfpp/tap/onemutemic
+    "Apple cannot verify ...".
+
+    Install without the quarantine attribute so it opens normally:
+      brew install --cask --no-quarantine gongfpp/tap/onemutemic
+
+    (If you already installed it, run the same command again; or open it once via
+    System Settings › Privacy & Security › "Open Anyway".)
   EOS
 end
